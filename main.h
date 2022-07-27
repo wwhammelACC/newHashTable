@@ -10,6 +10,10 @@ and a string for ‘data’). Implement a Separate Chaining
 #ifndef MAIN_H
 #define MAIN_H
 
+#include "linkedlist.h"
+#include "hashtable.h"
+
+
 #include <iostream>     /* cout, endl */
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
@@ -19,9 +23,8 @@ and a string for ‘data’). Implement a Separate Chaining
 #define MAXID 100
 #define BASE 5
 #define OFFSET 20
-
-//#define CHOICES 6
-//#define RANDOM_MULTIPLIER 10
+#define CHOICES 6
+#define RANDOM_MULTIPLIER 10
 
 using std::cout;
 using std::endl;

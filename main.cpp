@@ -64,91 +64,91 @@ int main() {
     cout << "done" << endl;
     cout << endl;
 
-    // show it is empty by calling getCount and printTable
-    cout << "testing initial printTable before insertEntry " << endl;
-    hashTab->printTable();
-    cout << "done" << endl;
-    cout << endl;
-    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
-    cout << endl;
-
-    // try and put ALL the test data into the table and show what happens
-    cout << "Inserting Test Data..." << endl;
-    for (int i = 0; i < testdatasize; i++) {
-        if (hashTab->insertEntry(ids[i], &strs[i])) {
-            cout << "success. entry inserted." << endl;
-            cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
-        } else {
-            cout << "failed to insert entry: " << ids[i] << endl;
-            cout << endl;
-        }
-    }
-    cout << endl;
-
-    cout << "initial testing getData " << endl;
-    for (int i = 0; i < testdatasize; i++){
-        if(hashTab->getData(ids[i])!= ""){
-            cout << "found " << ids[i] << ": " << hashTab->getData(ids[i]) << endl;
-        }else{
-            cout << "empty string " << endl;
-        }
-    }
-    cout << endl;
-
-    cout << "testing printTable after insertEntry " << endl;
-    hashTab->printTable();
-    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
-    cout << "done" << endl;
-    cout << endl;
-
-    cout << "testing initial removeEntry " << endl;
-    cout << "Trying: " << ids[0] << "..." << endl;
-    if (hashTab->removeEntry(ids[0])) {
-        cout << "Success: " << ids[0] << " removed" << endl;
-    } else {
-        cout << "Failed: " << ids[0] << " was not found" << endl;
-    }
-    cout << endl;
-
-    cout << "initial testing printTable after removeEntry " << endl;
-    hashTab->printTable();
-    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
-    cout << "done" << endl;
-    cout << endl;
-
-    cout << "another initial removeEntry test " << endl;
-    cout << "Trying: " << ids[(int) (testdatasize - 1) / 2] << "..." << endl;
-    if(hashTab->removeEntry(ids[(int) (testdatasize - 1) / 2])){
-        cout << "Success: " << ids[(int) (testdatasize - 1) / 2] << " removed" << endl;
-    }else{
-        cout << "Failed: " << ids[(int) (testdatasize - 1) / 2] << " was not found" << endl;
-    }
-    cout << endl;
-
-    cout << "another initial testing printTable after removeEntry " << endl;
-    hashTab->printTable();
-    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
-    cout << "done" << endl;
-    cout << endl;
-
-    // Delete all, to start more in depth testing....
-    cout << "clearing table " << endl;
-    for (int i = 0; i < testdatasize; i++){
-        if (hashTab->removeEntry(ids[i])) {
-            cout << "Success: " << ids[i] << " removed" << endl;
-        } else {
-            cout << "Failed: " << ids[i] << " was not found" << endl;
-        }
-    }
-    cout << endl;
-
-    // show it is empty by calling getCount and printTable
-    cout << "Showing Table is empty before more in depth testing... " << endl;
-    hashTab->printTable();
-    cout << "done" << endl;
-    cout << endl;
-    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
-    cout << endl;
+//    // show it is empty by calling getCount and printTable
+//    cout << "testing initial printTable before insertEntry " << endl;
+//    hashTab->printTable();
+//    cout << "done" << endl;
+//    cout << endl;
+//    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
+//    cout << endl;
+//
+//    // try and put ALL the test data into the table and show what happens
+//    cout << "Inserting Test Data..." << endl;
+//    for (int i = 0; i < testdatasize; i++) {
+//        if (hashTab->insertEntry(ids[i], &strs[i])) {
+//            cout << "success. entry inserted." << endl;
+//            cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
+//        } else {
+//            cout << "failed to insert entry: " << ids[i] << endl;
+//            cout << endl;
+//        }
+//    }
+//    cout << endl;
+//
+//    cout << "initial testing getData " << endl;
+//    for (int i = 0; i < testdatasize; i++){
+//        if(hashTab->getData(ids[i])!= ""){
+//            cout << "found " << ids[i] << ": " << hashTab->getData(ids[i]) << endl;
+//        }else{
+//            cout << "empty string " << endl;
+//        }
+//    }
+//    cout << endl;
+//
+//    cout << "testing printTable after insertEntry " << endl;
+//    hashTab->printTable();
+//    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
+//    cout << "done" << endl;
+//    cout << endl;
+//
+//    cout << "testing initial removeEntry " << endl;
+//    cout << "Trying: " << ids[0] << "..." << endl;
+//    if (hashTab->removeEntry(ids[0])) {
+//        cout << "Success: " << ids[0] << " removed" << endl;
+//    } else {
+//        cout << "Failed: " << ids[0] << " was not found" << endl;
+//    }
+//    cout << endl;
+//
+//    cout << "initial testing printTable after removeEntry " << endl;
+//    hashTab->printTable();
+//    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
+//    cout << "done" << endl;
+//    cout << endl;
+//
+//    cout << "another initial removeEntry test " << endl;
+//    cout << "Trying: " << ids[(int) (testdatasize - 1) / 2] << "..." << endl;
+//    if(hashTab->removeEntry(ids[(int) (testdatasize - 1) / 2])){
+//        cout << "Success: " << ids[(int) (testdatasize - 1) / 2] << " removed" << endl;
+//    }else{
+//        cout << "Failed: " << ids[(int) (testdatasize - 1) / 2] << " was not found" << endl;
+//    }
+//    cout << endl;
+//
+//    cout << "another initial testing printTable after removeEntry " << endl;
+//    hashTab->printTable();
+//    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
+//    cout << "done" << endl;
+//    cout << endl;
+//
+//    // Delete all, to start more in depth testing....
+//    cout << "clearing table " << endl;
+//    for (int i = 0; i < testdatasize; i++){
+//        if (hashTab->removeEntry(ids[i])) {
+//            cout << "Success: " << ids[i] << " removed" << endl;
+//        } else {
+//            cout << "Failed: " << ids[i] << " was not found" << endl;
+//        }
+//    }
+//    cout << endl;
+//
+//    // show it is empty by calling getCount and printTable
+//    cout << "Showing Table is empty before more in depth testing... " << endl;
+//    hashTab->printTable();
+//    cout << "done" << endl;
+//    cout << endl;
+//    cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
+//    cout << endl;
 
 
 
