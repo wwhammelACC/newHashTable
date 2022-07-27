@@ -7,6 +7,8 @@ and a string for ‘data’). Implement a Separate Chaining
 (i.e. not Linear Probing) hash table class.
  */
 
+#include "hashtable.h"
+
 /*
  * ****************************************
  * Constructors / Destructors
@@ -38,7 +40,7 @@ HashTable::~HashTable() {
 
 
 bool HashTable::insertEntry(int id, string *info){
-    flag = false;
+    bool flag = false;
 
     cout << "insertEntry test line" << endl;
 
@@ -53,7 +55,7 @@ string HashTable::getData(int id){
 }
 
 bool HashTable::removeEntry(int id){
-    flag = false;
+    bool flag = false;
 
     cout << "removeEntry test line" << endl;
 
