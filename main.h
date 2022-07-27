@@ -15,6 +15,9 @@
 #define BASE 5
 #define OFFSET 20
 
+//#define CHOICES 6
+//#define RANDOM_MULTIPLIER 10
+
 using std::cout;
 using std::endl;
 using std::string;
