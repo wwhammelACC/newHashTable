@@ -30,4 +30,53 @@ HashTable::~HashTable() {
     }
 }
 
+/*
+ * ****************************************
+ * Public
+ * ****************************************
+ */
+
+
+bool HashTable::insertEntry(int id, string *info){
+    flag = false;
+
+    cout << "insertEntry test line" << endl;
+
+    return flag;
+}
+
+string HashTable::getData(int id){
+
+    cout << "getData test line" << endl;
+
+    return found;
+}
+
+bool HashTable::removeEntry(int id){
+    flag = false;
+
+    cout << "removeEntry test line" << endl;
+
+    return flag;
+}
+
+int HashTable::getCount(){
+    // count is internal and updated within insertEntry
+    cout << "getCount test line" << endl;
+    return count;
+}
+
+void HashTable::printTable(){
+    cout << "printTable test line" << endl;
+}
+
+/*
+ * ****************************************
+ * Private
+ * ****************************************
+ */
+
+int HashTable::hash(int id){
+    return id % HASHTABLESIZE;
+}
 
