@@ -7,35 +7,38 @@ and a string for ‘data’). Implement a Separate Chaining
 (i.e. not Linear Probing) hash table class.
  */
 
-#ifndef HASHTABLE_H
-#define HASHTABLE_H
+#ifndef HASHTABLES_H
+#define HASHTABLES_H
 
 #include "linkedlist.h"
 #include <iostream>
-#include <string>
+#include <string>       /* string */
 
 #define HASHTABLESIZE 15
 
 using std::cout;
 using std::endl;
 
-class HashTable{
+class HashTable {
 
+// public methods
 public:
+
     HashTable(); // constructor
     ~HashTable(); // destructor
 
-    bool insertEntry(int, string*); // pass in the id and a string pointer and dynamically allocate inside the object
-    string getData(int); // pass in the id and return the data string associated with that id.
-    bool removeEntry(int); // pass in the id and return T/F for success or failure.
-    int getCount(); // return the number of total entries currently in the hash table.
-    void printTable(); // traverse the table showing all locations and their contents
+    bool insertEntry(int, string*);
+    string getData(int);
+    bool removeEntry(int);
+    int getCount();
+    void printTable();
 
+// private methods
 private:
 
-    int hash(int); //pass in the id and return id % HASHTABLESIZE
+    int hash(int);
     int count;
     LinkedList *hashtable[HASHTABLESIZE];
 };
 
-#endif //HASHTABLE_H
+#endif //HASHTABLES_H
