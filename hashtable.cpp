@@ -44,6 +44,17 @@ bool HashTable::insertEntry(int id, string *info){
 
     cout << "insertEntry test line" << endl;
 
+    if(id > 0 && *info != "\0" ){
+        int position = hash(id);
+        // linked list named hashtable send id/info to it's addNode
+        // note here linked lists addNode inserts data
+        cout << "if test insert entry " << endl;
+        if(hashtable[position]->addNode(id, info)){
+            cout << "send to addNode in linked list test " << endl;
+            flag = true;
+            count++;
+        }
+    }
     return flag;
 }
 
@@ -87,6 +98,6 @@ void HashTable::printTable(){
  */
 
 int HashTable::hash(int id){
-    return id % HASHTABLESIZE;
+    return id % HASHTABLESIZE; //pass in the id and return id % HASHTABLESIZE, creates the key
 }
 
