@@ -60,16 +60,16 @@ bool HashTable::insertEntry(int id, string *info){
 
 string HashTable::getData(int id){
     //making temporary data holder for testing
-//    Data tmpData;
-//    string found = "";
-//    if(id > 0){
-//        int position = hash(id);
-//        if (hashtable[position]->getNode(id, &tmpData)) {
-//            found = tmpData.data;
-//        }
-//    }
-    string found = "";
-    cout << "getData test line" << endl;
+    Data tmpData; // making Data Struct
+    string found = ""; // returns empty string if not exist
+    if(id > 0){ // the id has to be greater than 0 to exist
+        cout << "if id > 0 test line" << endl;
+        int position = hash(id); // gets the key
+        if (hashtable[position]->getNode(id, &tmpData)) { // get the node id and struct
+            cout << "if key exists test line" << endl;
+            found = tmpData.data; // if exists set found = to the struct string
+        }
+    }
     return found;
 }
 
