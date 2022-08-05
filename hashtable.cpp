@@ -74,10 +74,18 @@ string HashTable::getData(int id){
 }
 
 bool HashTable::removeEntry(int id){
+    // pass in the id and return T/F for success or failure.
     bool flag = false;
-
     cout << "removeEntry test line" << endl;
-
+    if (id > 0){  // input validation
+        cout << "if id is greater than 0 test line " << endl;
+        int position = hash(id); // gets the key
+        if (hashtable[position]->deleteNode(id)) { // if the key exists
+            cout << "if key exists test line " << endl;
+            removed = true; // remove
+            count -= 1;// decrement count
+        }
+    }
     return flag;
 }
 
