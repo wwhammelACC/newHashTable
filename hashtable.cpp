@@ -82,7 +82,7 @@ bool HashTable::removeEntry(int id){
         int position = hash(id); // gets the key
         if (hashtable[position]->deleteNode(id)) { // if the key exists
             cout << "if key exists test line " << endl;
-            removed = true; // remove
+            flag = true; // remove
             count -= 1;// decrement count
         }
     }
