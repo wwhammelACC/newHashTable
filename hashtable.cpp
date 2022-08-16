@@ -97,6 +97,10 @@ int HashTable::getCount(){
 
 void HashTable::printTable(){
     cout << "printTable test line" << endl;
+    for(int i = 0; i < HASHTABLESIZE; i++){
+        cout << "Table Entry " << i << ": ";
+        hashtable[i]->printList(); // uses linked list printList Method
+    }
 }
 
 /*
