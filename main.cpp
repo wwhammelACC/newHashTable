@@ -150,21 +150,8 @@ int main() {
     cout << "There are " << hashTab->getCount() << " entries in the table." << endl;
     cout << endl;
 
+    // Need to add empty table tests, filling tests and random tests
+    // most likely revisit full stack first
 
-
-    // create your hash table object here
-    
-    // show it is empty by calling getCount and printTable
-    
-    // try and put ALL the test data into the table and show what happens
-
-    // continue using and testing your table, add and remove data,
-    // do whatever it takes to full test your object and prove it
-    // is robust and can handle all use cases.
-
-    
-    
-    
-    
     return 0;
 }
